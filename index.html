@@ -1,17 +1,60 @@
-<!DOCTYPE>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<style>
-		img {
+	  .navbar {
+      margin-bottom: 0;
+      background-color: #f4511e;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+	 body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+  	}
+		#pics {
 			visibility: hidden;
-			width: 75%;
+			width: 65%;
 			height: auto;
 		}
 		h1 {
 			color: #7B0099;
 		}
+		h2 {
+			font-size: 100%;
+		}
+		h3 {
+			font-size: 100%;
+		}
 		#wireframeThree {
 			visibility: hidden;
+			font-family: Montserrat, sans-serif;
+			color: #7B0099;
+
 		}
 		#wireframeThreeBar {
 			margin-left: 30%;
@@ -29,21 +72,105 @@
 			margin-right: 10%;
 			margin-top: 6%;
 		}
+		.carousel-inner > .item > img,
+ 		.carousel-inner > .item > a > img {
+        width: 70%;
+        margin: auto;
+  }
+	  #ogLOGO {
+	  	color: #7B0099;
+	  }
+	    .jumbotron {
+      background-color: #f4511e;
+      color: #fff;
+      padding: 16% 25px;
+      font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
 	</style>
 </head>
 <body>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#myPage">!oohay</a>
+    </div>
+  </div>
+</nav>
 	<div id="wireframeTwo">
-		<center><h1>!oohay</h1>
+
+<div class="jumbotron text-center">
+  <h1>!oohay</h1>
+  <p>A place to find attractive men.</p>
+  <form class="form-inline">
+    <input type="button" id="nextPageButton" class="btn btn-danger" value="Let's start !oohay-ing" onclick="nextPageFunction()"/>
+  </form>
+</div>
+		<center>
+<!-- 		<h1>!oohay</h1>
+		<div id="myCarousel" class="carousel slide" data-ride="carousel"> -->
+  <!-- Indicators -->
+<!--   <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+ -->
+  <!-- Wrapper for slides -->
+<!--   <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="magmagCoconut.jpg" alt="New York">
+      <div class="carousel-caption">
+        <h3 id="ogLOGO">!OOHAY</h3>
+        <p id="ogLOGO">A place to find attractive men.</p>
+      </div> 
+    </div>
+
+    <div class="item">
+      <img src="magmagCoconut.jpg" alt="Chicago">
+      <div class="carousel-caption">
+        <h3 id="ogLOGO">!OOHAY</h3>
+        <p id="ogLOGO">A place to find attractive men.</p>
+      </div> 
+    </div>
+
+    <div class="item">
+      <img src="magmagCoconut.jpg" alt="Los Angeles">
+      <div class="carousel-caption">
+        <h3 id="ogLOGO">!OOHAY</h3>
+        <p id="ogLOGO">A place to find attractive men.</p>
+      </div> 
+    </div>
+  </div> -->
+
+  <!-- Left and right controls -->
+<!--   <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div> -->
 		<form>
 		<br>
-		<input type="button" value="Let's start !oohay-ing" id = "nextPageButton" onclick = "nextPageFunction()"/>
-		</form></center>
+<!-- 		<input type="button" value="Let's start !oohay-ing" class = "btn btn-default btn-lg" id = "nextPageButton" onclick = "nextPageFunction()"/>
+ -->		</form>
+		</center>
 	</div>
 	<div id="wireframeThree">
 		<div id="wireframeThreeBar"><h1>!oohay</h1>
 			<form>
 			<input type="text" id="usersName" name="value" placeholder="What is yo name?" /> <br> <br>
-			<input type="button" value="!oohay ME" id = "submitButton" onclick = "myFunction()"/>
+			<input type="button" value="!oohay ME" id = "submitButton" class="btn btn-danger btn-lg" onclick = "myFunction()"/>
 			</form>
 		</div>
 		<div id="wireframeThreeImage">
@@ -54,7 +181,7 @@
 	</div>
 	<script>
 		function myFunction() {
-			var nameArray = ["Alvaro Soler", "Justin Baldoni", "Klay Thompson", "Jonathan", "Jason", "Luke", "Caleb", "Wilson", "Victor", "Justin", "Sam P.", "Sam K.", "Danny"]
+			var nameArray = ["Alvaro Soler", "Justin Baldoni", "Klay Thompson", "Jonathan", "Jason", "Luke", "Caleb", "Wilson", "Victor", "Justin", "Sam P", "Sam K", "Danny"]
 			var funFactArray = ["I\'m also fluent in 5 different languages", "I co-founded SHOUT, an app focused on changing the way we interact online", "I\'m also left handed", "I've riden an elephant in Thailand", "I was on a high school state champion fencing team", "I'm a breakdancer", "my left eye is bigger than my right eye","I've gone skydiving", "I sometimes sleep with my eyes open", "I also plan on becoming a mechanical engineer", "when I was a child, I preferred to dress nice, no matter where I was going (church, grocery store, etc)", "I love Taylor Swift", "I'm a pizza lover"]
 			var boyImgList = ["http://www.mundodeportivo.com/r/GODO/MD/p3/Ocio/Imagenes/2015/10/02/Recortada/img_pmorata_20150930-141121_imagenes_md_propias_pmorata_pepm0064-kkRC--572x818@MundoDeportivo-Web.JPG", "https://img.buzzfeed.com/buzzfeed-static/static/2015-12/11/14/enhanced/webdr03/enhanced-12065-1449863704-2.png", "http://www.travelandleisure.com/sites/default/files/styles/1600x1000/public/klaythompson0815-1.jpg?itok=L3X5M-0D", "http://i64.tinypic.com/2upct9c.jpg", "http://i65.tinypic.com/24lj8uo.jpg", "http://i63.tinypic.com/15wh3ly.jpg", "http://i64.tinypic.com/2z56jkj.jpg", "http://i68.tinypic.com/6gvnn8.jpg", "http://i65.tinypic.com/2lc01j.jpg", "http://i68.tinypic.com/1z5omdd.jpg", "http://i65.tinypic.com/bp7k.jpg", "http://i67.tinypic.com/205zj37.jpg", "http://i67.tinypic.com/2s0mfde.jpg"]
 			var randomNumber = Math.floor(Math.random()*(boyImgList.length));
