@@ -1,0 +1,84 @@
+<!DOCTYPE>
+<html>
+<head>
+	<style>
+		img {
+			visibility: hidden;
+			width: 75%;
+			height: auto;
+		}
+		h1 {
+			color: #7B0099;
+		}
+		#wireframeThree {
+			visibility: hidden;
+		}
+		#wireframeThreeBar {
+			margin-left: 30%;
+			margin-top: 8%;
+			width: 15%;
+			height: 100%;
+			vertical-align: middle;
+			float: left;
+/*			visibility: hidden;
+			display: inline-block; */
+		}
+		#wireframeThreeImage {
+/*			visibility: hidden;
+*/			margin-left: 45%;
+			margin-right: 10%;
+			margin-top: 6%;
+		}
+	</style>
+</head>
+<body>
+	<div id="wireframeTwo">
+		<center><h1>!oohay</h1>
+		<form>
+		<br>
+		<input type="button" value="Let's start !oohay-ing" id = "nextPageButton" onclick = "nextPageFunction()"/>
+		</form></center>
+	</div>
+	<div id="wireframeThree">
+		<div id="wireframeThreeBar"><h1>!oohay</h1>
+			<form>
+			<input type="text" id="usersName" name="value" placeholder="What is yo name?" /> <br> <br>
+			<input type="button" value="!oohay ME" id = "submitButton" onclick = "myFunction()"/>
+			</form>
+		</div>
+		<div id="wireframeThreeImage">
+			<img id="pics">
+			<h2 id="username"></h2>
+			<h3 id="funFactTag"></h3>
+		</div>
+	</div>
+	<script>
+		function myFunction() {
+			var nameArray = ["Alvaro Soler", "Justin Baldoni", "Klay Thompson", "Jonathan", "Jason", "Luke", "Caleb", "Wilson", "Victor", "Justin", "Sam P.", "Sam K.", "Danny"]
+			var funFactArray = ["I\'m also fluent in 5 different languages", "I co-founded SHOUT, an app focused on changing the way we interact online", "I\'m also left handed", "I've riden an elephant in Thailand", "I was on a high school state champion fencing team", "I'm a breakdancer", "my left eye is bigger than my right eye","I've gone skydiving", "I sometimes sleep with my eyes open", "I also plan on becoming a mechanical engineer", "when I was a child, I preferred to dress nice, no matter where I was going (church, grocery store, etc)", "I love Taylor Swift", "I'm a pizza lover"]
+			var boyImgList = ["http://www.mundodeportivo.com/r/GODO/MD/p3/Ocio/Imagenes/2015/10/02/Recortada/img_pmorata_20150930-141121_imagenes_md_propias_pmorata_pepm0064-kkRC--572x818@MundoDeportivo-Web.JPG", "https://img.buzzfeed.com/buzzfeed-static/static/2015-12/11/14/enhanced/webdr03/enhanced-12065-1449863704-2.png", "http://www.travelandleisure.com/sites/default/files/styles/1600x1000/public/klaythompson0815-1.jpg?itok=L3X5M-0D", "http://i64.tinypic.com/2upct9c.jpg", "http://i65.tinypic.com/24lj8uo.jpg", "http://i63.tinypic.com/15wh3ly.jpg", "http://i64.tinypic.com/2z56jkj.jpg", "http://i68.tinypic.com/6gvnn8.jpg", "http://i65.tinypic.com/2lc01j.jpg", "http://i68.tinypic.com/1z5omdd.jpg", "http://i65.tinypic.com/bp7k.jpg", "http://i67.tinypic.com/205zj37.jpg", "http://i67.tinypic.com/2s0mfde.jpg"]
+			var randomNumber = Math.floor(Math.random()*(boyImgList.length));
+			while(randomNumber == oldNumber){
+				randomNumber = Math.floor(Math.random()*(boyImgList.length));
+			}
+			oldNumber = randomNumber;
+			var usernamename = document.getElementById("usersName").value;
+			document.getElementById("username").innerHTML = "!oohay " + usernamename + ". I'm " + nameArray[randomNumber] + ".";
+			document.getElementById("funFactTag").innerHTML = "On top of being ridiculously good looking, " + funFactArray[randomNumber] + ".";
+			var boyImg = document.getElementById("pics");
+			boyImg.style.visibility = 'visible';
+			boyImg.src = (boyImgList[randomNumber]);
+			var thirdWireframe = document.getElementById("wireframeThree");
+			thirdWireframe.style.visibility = 'visible';
+			document.getElementById("wireframeTwo").parentNode.removeChild(document.getElementById("wireframeTwo"));
+		};
+		function nextPageFunction () {
+			document.getElementById("wireframeTwo").parentNode.removeChild(document.getElementById("wireframeTwo"));		
+			var thirdWireframe = document.getElementById("wireframeThree");
+			thirdWireframe.style.visibility = 'visible';	
+		}
+		var oldNumber = -1;
+		document.getElementById("submitButton").onclick = myFunction;
+	</script>
+</body>
+</html>
